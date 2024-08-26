@@ -394,7 +394,7 @@ a:active {
 
 .gallery span{
   position:absolute;
-  width:100%;
+  width:50%;
   height:100%;
   transform-origin:center;
   transform-style:preserve-3d;
