@@ -464,8 +464,8 @@ a:active {
 /* Image Styling */
 .image-border img {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 720;
+  height: 1080;
   align: center;
   border: 5px solid #ffffff;
   border-radius: 10px;
