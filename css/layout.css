@@ -445,3 +445,33 @@ a:active {
   transform: translateY(calc(1.75*var(--s))) scale(.5) rotate(45deg);
   --b: 70%;
 }
+
+/* Stylish Image Border */
+.image-border {
+  display: inline-block;
+  padding: 10px; /* Padding inside the border */
+  background: linear-gradient(45deg, #444, #1c1c1c);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-border:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Image Styling */
+.image-border img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 5px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.image-border img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
