@@ -409,7 +409,7 @@ a:active {
   border-radius: 50%;
   inset: calc(50% - var(--s)/3);
   cursor: pointer;
-  --g: linear-gradient(#000 0 0) no-repeat;
+  --g: linear-gradient(#ffffff 0 0) no-repeat;
   background: var(--g) 50%/var(--b,0%) 3px,var(--g) 50%/3px var(--b,0%);
   transition: 1.5s;
   -webkit-appearance: none;
