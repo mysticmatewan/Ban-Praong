@@ -80,12 +80,12 @@ img {
 	}
 	
 	#sidebar-left {
-		width: 15%;
+		width: 20%;
 		float: left;
 	}
 	
 	#sidebar-right {
-		width: 30%;
+		width: 25%;
 		float: left;
 	}
 }
