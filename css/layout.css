@@ -1,5 +1,5 @@
 body {
-  background-color: black ;
+  background-color: #2c577a ;
 }
 
 
@@ -117,7 +117,7 @@ img {
 	}
 	
 	#main-content {
-		left: 20%; /*Width of #left-sidebar*/
+		left: 21%; /*Width of #left-sidebar*/
 	}
 }
 
@@ -565,3 +565,12 @@ a:active {
     transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
+
+#header {
+    background: #1c232b;
+    height: auto;
+    padding: 100px 100px;
+	border: 2px solid #ffffff;
+	
+}
+
