@@ -210,22 +210,22 @@ td {
 
 /* unvisited link */
 a:link {
-  color: #8a8a38;
+  color: #000;
 }
 
 /* visited link */
 a:visited {
-  color: #8a8a38;
+  color: #000;
 }
 
 /* mouse over link */
 a:hover {
-  color: #e6e639; 
+  color: #8a8a38; 
 }
 
 /* selected link */
 a:active {
-  color: #8a8a38;
+  color: #000;
 }	 
 
 .footer {
