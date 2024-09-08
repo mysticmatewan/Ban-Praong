@@ -608,3 +608,17 @@ a:active {
 	
 }
 
+.chord {
+    color: #ff4500;
+    font-weight: bold;
+}
+
+.lyrics {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.line {
+    margin-bottom: 15px;
+}
+
