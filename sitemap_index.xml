@@ -11,7 +11,7 @@
 
   <!-- Example: About Page -->
   <url>
-    <loc>https://banpraong.netlify.app/#about.html</loc>
+    <loc>https://banpraong.netlify.app/#home.html</loc>
     <lastmod>2024-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -27,7 +27,7 @@
 
   <!-- Example: Contact Page -->
   <url>
-    <loc>https://banpraong.netlify.app/#portfolio.html</loc>
+    <loc>https://banpraong.netlify.app/#about.html</loc>
     <lastmod>2024-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
