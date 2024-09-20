@@ -6,7 +6,7 @@ $con_message = $_POST['con_message'];
 
 
 
-$to = 'onurtavil8@gmail.com';   
+$to = '2021840072@student.uitm.edu.my';   
 $subject = 'Stephans Form';
 
 $message = '<strong>Name : </strong>'.$con_name.'<br/><br/>';
