@@ -20,5 +20,8 @@ $headers .='X-Mailer: PHP/' . phpversion();
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
 
-mail($to,$subject,$message,$headers);
-echo 1;
+if(mail($to,$subject,$message,$headers)){
+        echo "The email($email_subject) was successfully sent.";
+    } else {
+        echo "The email($email_subject) was NOT sent.";
+    }
