@@ -234,6 +234,7 @@
             <div class="container">
                 <div class="section-title dright top_120 bottom_45">
                     <h2>LATEST BLOGS</h2>
+					<div id="blog-widget"></div> <script> async function loadBlog(label) { const q = label ? `?label=${encodeURIComponent(label)}&max=5` : '?max=5'; const res = await fetch('/.netlify/functions/blogger' + q); if (!res.ok) { document.getElementById('blog-widget').innerText = 'Feed unavailable'; return; } const data = await res.json(); const html = data.items.map(it => ` <article class="post"> <a href="${it.url}" target="_blank" rel="noopener">${it.title}</a> <p class="snippet">${it.contentSnippet}</p> <time>${new Date(it.published).toLocaleDateString()}</time> </article>`).join(''); document.getElementById('blog-widget').innerHTML = html; } loadBlog(); // latest // loadBlog('Tech'); // by label </script>
                 </div>
                 <!-- Blogs -->
                 <div class="row">
