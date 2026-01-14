@@ -32,7 +32,7 @@ exports.handler = async function(event) {
     // Build Blogger v3 URL
     const base = `https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts`;
     const url = new URL(base);
-    url.searchParams.set('key', API_KEY);
+    url.searchParams.set('key', AIzaSyA_qNSQYlZxUkfJZKy0F9WFxNp3mIpt9PQ);
     url.searchParams.set('maxResults', String(maxResults));
     if (label) url.searchParams.set('labels', label);
 
