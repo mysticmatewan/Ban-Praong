@@ -240,7 +240,7 @@
 <script>
 async function loadBlog(label) {
   const q = label ? `?label=${encodeURIComponent(label)}&max=5` : '?max=5';
-  const endpoint = '/.netlify/functions/blogger' + q; // note the leading dot
+  const endpoint = '/.netlify/functions/blogger.js' + q; // note the leading dot
   try {
     const res = await fetch(endpoint, { cache: 'no-store' });
     if (!res.ok) {
