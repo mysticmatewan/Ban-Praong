@@ -234,7 +234,44 @@
             <div class="container">
                 <div class="section-title dright top_120 bottom_45">
                     <h2>LATEST BLOGS</h2>
-					<div id="blog-widget"></div> <script> async function loadBlog(label) { const q = label ? `?label=${encodeURIComponent(label)}&max=5` : '?max=5'; const res = await fetch('/netlify/functions/blogger' + q); if (!res.ok) { document.getElementById('blog-widget').innerText = 'Feed unavailable'; return; } const data = await res.json(); const html = data.items.map(it => ` <article class="post"> <a href="${it.url}" target="_blank" rel="noopener">${it.title}</a> <p class="snippet">${it.contentSnippet}</p> <time>${new Date(it.published).toLocaleDateString()}</time> </article>`).join(''); document.getElementById('blog-widget').innerHTML = html; } loadBlog(); // latest // loadBlog('Tech'); // by label </script>
+					 <div id="blog-widget"></div> 
+					  <div id="blog-widget">Loading posts…</div>
+<!--blogger-->
+<script>
+async function loadBlog(label) {
+  const q = label ? `?label=${encodeURIComponent(label)}&max=5` : '?max=5';
+  const endpoint = '/.netlify/functions/blogger' + q; // note the leading dot
+  try {
+    const res = await fetch(endpoint, { cache: 'no-store' });
+    if (!res.ok) {
+      const text = await res.text().catch(()=>null);
+      console.error('Blogger function error', res.status, res.statusText, text);
+      document.getElementById('blog-widget').innerText = 'Feed unavailable (server error)';
+      return;
+    }
+    const data = await res.json();
+    if (!data || !Array.isArray(data.items)) {
+      console.error('Unexpected response shape', data);
+      document.getElementById('blog-widget').innerText = 'Feed unavailable (bad response)';
+      return;
+    }
+    const html = data.items.map(it => `
+      <article class="post">
+        <a href="${it.url}" target="_blank" rel="noopener">${it.title}</a>
+        <p class="snippet">${it.contentSnippet || ''}</p>
+        <time>${it.published ? new Date(it.published).toLocaleDateString() : ''}</time>
+      </article>
+    `).join('');
+    document.getElementById('blog-widget').innerHTML = html || 'No posts found';
+  } catch (err) {
+    console.error('Fetch failed', err);
+    document.getElementById('blog-widget').innerText = 'Feed unavailable (network error)';
+  }
+}
+loadBlog();
+</script>
+<!--Blogger ends-->
+
                 </div>
                 <!-- Blogs -->
                 <div class="row">
